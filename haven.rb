@@ -5,21 +5,21 @@
 class Haven < Formula
   desc "Deploy open-source LLMs to your own cloud with one command"
   homepage "https://github.com/yuritur/haven"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yuritur/haven/releases/download/v0.0.4/haven_0.0.4_darwin_amd64.tar.gz"
-      sha256 "4e0417bd08cfc782315a4c8528ed8d7ce44dcc1ddbcd937655da1568b75bb0d0"
+      url "https://github.com/yuritur/haven/releases/download/v0.0.5/haven_0.0.5_darwin_amd64.tar.gz"
+      sha256 "179af0fddfb3f8ede8e1e779c4af1da31ec2371888b8c82c188c55868a9e88c4"
 
       define_method(:install) do
         bin.install "haven"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yuritur/haven/releases/download/v0.0.4/haven_0.0.4_darwin_arm64.tar.gz"
-      sha256 "ddbc3484f644d6358a472357f2a3aac5008196f2b66cf3e56ca25964491f4030"
+      url "https://github.com/yuritur/haven/releases/download/v0.0.5/haven_0.0.5_darwin_arm64.tar.gz"
+      sha256 "a1b7c70d8de8c37411859831b845d8439847adb7b51e053b179a346da91adb30"
 
       define_method(:install) do
         bin.install "haven"
@@ -29,15 +29,15 @@ class Haven < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yuritur/haven/releases/download/v0.0.4/haven_0.0.4_linux_amd64.tar.gz"
-      sha256 "9eef6972ddb37ba99555535d7a0e055d53fce83031722ce1fdd088b8c2b99977"
+      url "https://github.com/yuritur/haven/releases/download/v0.0.5/haven_0.0.5_linux_amd64.tar.gz"
+      sha256 "27d9ab9d63594fa2dbd8312b14e13e354af8d2aa181247f1ba26282bef71b39a"
       define_method(:install) do
         bin.install "haven"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yuritur/haven/releases/download/v0.0.4/haven_0.0.4_linux_arm64.tar.gz"
-      sha256 "6cbeeedc190c089250746fc970c72681423647fda54b6615f4c41b55b7f2336f"
+      url "https://github.com/yuritur/haven/releases/download/v0.0.5/haven_0.0.5_linux_arm64.tar.gz"
+      sha256 "8b6d29bffce86b9435cc489f035906d10eda5c4ac65595d78e009104e530e159"
       define_method(:install) do
         bin.install "haven"
       end
